@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Atteribute</title>
+    <style>
+      h1[class] {
+        font-size: 30;
+      }
+      a[target] {
+        color: gold;
+      }
+      /*속성값이 일치*/
+      h1[naver-title] {
+        color: red;
+      }
+
+      /*속성값을 포함하는 요소*/
+      a[href*="www"] {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="naver-title">네이버</h1>
+    <a href="https://www.naver.com/">네이버</a>
+    <h1 class="google-title">구글</h1>
+    <a href="https://www.google.co.kr/?hl=ko" target="_blank">구글</a>
+    <h1 class="kakaotalk-title">카톡</h1>
+    <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk">카톡</a>
+  </body>
+</html>

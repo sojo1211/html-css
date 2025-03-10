@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector Condination</title>
+    <style>
+      section li {
+        color: blue; /* 오타 수정 */
+      }
+      section span {
+        color: yellow; /* 오타 수정 */
+      }
+      .text {
+        text-decoration-color: red;
+        text-decoration: none;
+      }
+      section li > ul {
+        color: blue;
+      }
+
+      /* 일반 형제 결합자 */
+      p ~ span {
+        /*p다음에 나오는 span*/
+        color: red;
+      }
+
+      /*인접 형제 결합자   */
+      p + code {
+        font-size: 30px;
+      }
+      .first + li {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>헬스</h1>
+      <span>헬스 화이팅입니다</span>
+      <hr />
+      <h2>
+        문서
+        <a class="text" href="https://ko.wikipedia.org/wiki/%ED%86%A0%EB%A1%A0"
+          >토론</a
+        >
+      </h2>
+      <hr />
+
+      <ul>
+        <li>의료</li>
+        <li>보건</li>
+        <li>체력</li>
+        <li>패션 헬스</li>
+        <li>구글 헬스</li>
+      </ul>
+    </section>
+    <hr />
+    <section>
+      <span>이건 빨강이 아닙니다</span>
+      <p>여기 문단이 있습니다</p>
+      <p>
+        <code>여기는 코드가 있는 곳이에요</code>
+      </p>
+      <span>이제 빨강입니다</span>
+      <p>
+        <code>여기는 코드가 있어요</code>
+      </p>
+      <span>이것도 빨강입니다</span>
+    </section>
+    <section>
+      <ul>
+        <li class="first">one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
+    </section>
+  </body>
+</html>
