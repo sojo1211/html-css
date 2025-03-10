@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio&Checkbox</title>
+  </head>
+  <body>
+    <form action="/signup">
+      <fieldset>
+        <legend>좋아하는 색상을 입력해주세요</legend>
+        <ul>
+          <li>
+            <label for="red">빨강</label>
+            <input type="checkbox" id="red" value="red" />
+            <!--선택할 수 있음 checkbox때문에-->
+          </li>
+          <li>
+            <label for="orange">주황</label>
+            <input type="checkbox" id="orange" value="orange" />
+            <!--선택할 수 있음 checkbox때문에-->
+          </li>
+          <li>
+            <label for="yellow">노랑</label>
+            <input type="checkbox" id="yellow" value="yellow" />
+            <!--선택할 수 있음 checkbox때문에-->
+          </li>
+          <li>
+            <label for="green">초록</label>
+            <input type="checkbox" id="green" value="green" />
+            <!--선택할 수 있음 checkbox때문에-->
+          </li>
+          <li>
+            <label for="blue">파랑</label>
+            <input type="checkbox" id="blue" value="blue" />
+            <!--선택할 수 있음 checkbox때문에-->
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>배송방법?</legend>
+        <ul>
+          <li>
+            <label for="free">무료</label>
+            <input type="radio" name="delivary" id="'free" value="free" />
+            <!--같이 쓸려면 이름이 같아야함-->
+          </li>
+          <li>
+            <label for="pay">유료</label>
+            <input type="radio" name="delivary" id="'pay" value="pay" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>자기소개서</legend>
+        <ul>
+          <li>
+            <textarea name="" id="" cols="15" rows="5"></textarea>
+            <!--textarea여러줄 데이터 입력, rows 화면에 표시되는 행수, cols 화면에 표시되는 컬럼수 지정 -->
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>주문상품을 선택해주세요!</legend>
+        <ul>
+          <li>
+            <select name="goods" id="goods" multiple>
+              <!--멀티풀로 중복-->
+              <!--선택-->
+              <option value="apple_10kg">사과10kg</option>
+              <option value="apple_10kg" selected>사과20kg</option>
+              <!--selected이미지정된-->
+              <option value="apple_10kg">사과30kg</option>
+            </select>
+          </li>
+        </ul>
+        <li>
+          <label for="ice-cream-choice">맛을 선택하세요</label>
+          <input
+            list="ice-cream-flavors"
+            id="ice-cream-choice"
+            name="ice-cream-choice"
+          />
+          <datalist id="ice-cream-flavors">
+            <option value="Chocolate"></option>
+            <option value="Coconut"></option>
+            <option value="Mint"></option>
+            <option value="Strawberry"></option>
+            <option value="Vanilla"></option>
+          </datalist>
+        </li>
+      </fieldset>
+      <fieldset>
+        <button type="submit">제출하기</button>
+        <button type="submit">리셋하기</button>
+        <button type="submit" onclick="alert('Hello World')">버튼</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
